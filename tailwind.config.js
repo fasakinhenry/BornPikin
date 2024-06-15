@@ -18,6 +18,7 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          primary: "#287bff"
         },
         stroke: {
           1: "#26242C",
@@ -37,11 +38,15 @@ export default {
           12: "#2E2A41",
           13: "#6C7275",
         },
+        primary: {
+          blue: "#287bff"
+        }
       },
       fontFamily: {
         sans: ["var(--font-sora)", ...fontFamily.sans],
         code: "var(--font-code)",
         grotesk: "var(--font-grotesk)",
+        jakarta: "var(--font-jakarta)"
       },
       letterSpacing: {
         tagline: ".15em",

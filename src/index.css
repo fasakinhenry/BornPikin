@@ -21,7 +21,7 @@
 
 @layer base {
     body {
-        @apply font-sans bg-n-8 text-n-1 text-base;
+        @apply font-jakarta bg-white text-black text-base;
     }
 }
 
