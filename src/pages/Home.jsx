@@ -7,7 +7,7 @@ const LandingPage = () => (
     className="container relative text-center py-10 flex flex-col items-center w-full mt-5 bg-repeat h-[100vh]"
     // style={{ backgroundImage: `url(${landingImage})` }}
   >
-    <div className="sliding-background"></div>
+    <div className="w-full sliding-background"></div>
     <p className="absolute top-13 text-gray-700 bg-gray-200 w-fit p-3 rounded-full">
       Health and safety is just a dream if you don’t recycle
     </p>
