@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <header className="bg-white shadow p-4 flex justify-between items-center">
+  <header className="bg-white shadow p-4 flex justify-between items-center w-full">
     <div className="text-xl font-bold">Pipance</div>
     <nav className="space-x-4">
-      <a href="/" className="text-blue-600">Home</a>
-      <a href="#how-it-works" className="hover:text-blue-600">How it works</a>
-      <a href="#functions" className="hover:text-blue-600">Functions</a>
-      <a href="#team" className="hover:text-blue-600">Team</a>
+      <Link to="/" className="text-blue-600">Home</Link>
+      <Link to="how-it-works" className="hover:text-blue-600">How it works</Link>
+      <Link to="functions" className="hover:text-blue-600">Functions</Link>
+      <Link to="team" className="hover:text-blue-600">Team</Link>
     </nav>
     <div>
       <button className="bg-gray-200 px-4 py-2 rounded mr-2">Signup</button>

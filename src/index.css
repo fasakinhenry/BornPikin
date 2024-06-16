@@ -25,6 +25,27 @@
     }
 }
 
+.container {
+    overflow: hidden;
+}
+
+.sliding-background {
+    background: url("./assets/landing.png") repeat-x;
+    height: 1024px;
+    width: 4320px;
+    animation: slide 60s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-1692px, 0, 0);
+    }
+}
+
 .rotate-45 {
     @apply rotate-[45deg];
 }
