@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import { Outlet } from "react-router-dom";
-const Layout = () => {
+const LandingLayout = () => {
   return (
     <div className="overflow-hidden">
       <Banner />
@@ -14,4 +14,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default LandingLayout;
