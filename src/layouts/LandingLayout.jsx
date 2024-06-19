@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 import { Outlet } from "react-router-dom";
 const Layout = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Banner />
       <Header />
       <main>

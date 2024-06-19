@@ -27,6 +27,12 @@
 
 .container {
     overflow: hidden;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 99vw;
+    max-width: 100vw;
 }
 
 .sliding-background {
