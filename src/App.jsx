@@ -5,6 +5,8 @@ import AuthLayout from "./layouts/AuthLayout";
 import DashboardLayout from "./layouts/DashboardLayout";
 import LandingPage from "./pages/Home";
 import Features from "./pages/Functions";
+import LoginPage from "./pages/LoginPage";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => (
   <Router>
