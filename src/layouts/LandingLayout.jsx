@@ -1,13 +1,13 @@
-import React from "react";
-import Header from "../components/Header";
-import Banner from "../components/Banner";
-import { Outlet } from "react-router-dom";
+import React from 'react';
+import Header from '../components/Header';
+import Banner from '../components/Banner';
+import { Outlet } from 'react-router-dom';
 const LandingLayout = () => {
   return (
-    <div className="overflow-hidden">
+    <div className='!w-full'>
       <Banner />
       <Header />
-      <main>
+      <main className='!w-full'>
         <Outlet />
       </main>
     </div>
