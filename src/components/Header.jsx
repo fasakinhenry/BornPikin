@@ -18,14 +18,14 @@ const Header = () => (
         Team
       </Link>
     </nav>
-    <div>
+    {/* <div>
       <Link to="/login" className="bg-gray-200 px-4 py-2 rounded mr-2">
         Signup
       </Link>
       <Link to="/login" className="bg-blue-600 text-white px-4 py-2 rounded">
         Login
       </Link>
-    </div>
+    </div> */}
   </header>
 );
 
