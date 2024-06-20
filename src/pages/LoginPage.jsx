@@ -40,8 +40,8 @@ const LoginPage = () => {
             Account Type
           </label>
           <select className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500">
-            <option>User</option>
-            <option>Recycling company</option>
+            <option>Mother / Pregnant women</option>
+            <option>Hospitals / clinic</option>
             <option>Collector/Intermediary</option>
           </select>
         </div>
