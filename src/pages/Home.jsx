@@ -10,8 +10,7 @@ const LandingPage = () => (
     <div className="w-full"></div>
     <div className=" absolute top-20 mt-10">
       <h1 className="text-6xl font-black mt-10">
-        Turn <span className="text-blue-600">Waste</span> into Worth with
-        Pipance
+        Take <span className="text-blue-600">Care</span> of <span className="text-blue-600">Yourself</span> and <span className="text-blue-600">Pikin</span> wella
       </h1>
     </div>
 
