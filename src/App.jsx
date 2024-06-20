@@ -6,6 +6,7 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import LandingPage from "./pages/Home";
 import Features from "./pages/Functions";
 import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignupPage";
 import Dashboard from "./pages/Dashboard";
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
       {/* Signin and Signup page layout */}
       <Route element={<AuthLayout />}>
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Route>
       {/* Main application or dashboard layout */}
       <Route element={<DashboardLayout />}>
