@@ -13,6 +13,7 @@ import {
   FaSignOutAlt,
   FaBars,
 } from 'react-icons/fa';
+import profilePic from '../assets/profile.jpg';
 
 const DashboardLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -111,7 +112,7 @@ const DashboardLayout = () => {
 const ProfileComponent = () => (
   <div className='flex items-center'>
     <img
-      src='/path-to-profile-image.jpg'
+      src={profilePic}
       alt='Profile'
       className='w-10 h-10 rounded-full mr-3'
     />
