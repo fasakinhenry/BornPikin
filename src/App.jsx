@@ -7,7 +7,9 @@ import LandingPage from "./pages/Home";
 import Features from "./pages/Functions";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
-import Dashboard from "./pages/Dashboard";
+// import Dashboard from "./pages/Dashboard";
+import Dashboard from './components/Dashboard';
+import Hospitals from './components/Hospitals';
 
 const App = () => (
   <Router>
