@@ -7,7 +7,7 @@ import LandingPage from './pages/Home';
 import Features from './pages/Functions';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
-// import Dashboard from './components/Dashboard';
+import Dashboard from './components/Dashboard';
 import Hospitals from './components/Hospitals';
 import Appointments from './components/Appointments';
 import Medication from './components/Medication';
