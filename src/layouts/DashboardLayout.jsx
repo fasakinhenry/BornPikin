@@ -12,7 +12,7 @@ const DashboardLayout = () => {
     <div className='flex h-screen bg-gray-100'>
       <aside className='w-64 bg-white shadow-md'>
         <div className='p-4'>
-          <h1 className='text-xl font-bold'>MediSync</h1>
+          <h1 className='text-xl font-bold'>BornPikin</h1>
         </div>
         <nav className='mt-4'>
           <NavLink to='/dashboard' className={navLinkClasses}>
