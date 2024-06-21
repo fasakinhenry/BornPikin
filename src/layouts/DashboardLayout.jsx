@@ -5,6 +5,7 @@ import {
   FaThLarge,
   FaHospital,
   FaCalendar,
+  FaInbox,
   FaPills,
   FaFileAlt,
   FaUserMd,
@@ -38,7 +39,7 @@ const DashboardLayout = () => {
         } transition-transform duration-300 ease-in-out md:relative md:translate-x-0`}
       >
         <div className='p-4'>
-          <h1 className='text-xl font-bold'>MediSync</h1>
+          <h1 className='text-xl font-bold'>BornPikin</h1>
         </div>
         <nav className='flex-1'>
           <NavLink
@@ -61,6 +62,13 @@ const DashboardLayout = () => {
             onClick={() => setSidebarOpen(false)}
           >
             <FaCalendar className='mr-3' /> Appointments
+          </NavLink>
+          <NavLink
+            to='/messages'
+            className={navLinkClasses}
+            onClick={() => setSidebarOpen(false)}
+          >
+            <FaInbox className='mr-3' /> Messages
           </NavLink>
           <NavLink
             to='/medication'

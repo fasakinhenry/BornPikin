@@ -1,5 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
+import gridLines from '../assets/grid_lines.png';
 
 const AuthLayout = () => (
   <div className="flex h-screen">
@@ -10,7 +11,7 @@ const AuthLayout = () => (
         <p className="mt-2 text-xl">Take care of your pikin wella</p>
       </div>
     </aside>
-    <main className="w-1/2 flex flex-col items-center justify-center px-10 overflow-y-scroll">
+    <main className="w-1/2 flex flex-col items-center justify-center px-10 overflow-y-scroll" style={{ backgroundImage: `url(${gridLines})` }}>
       <Outlet />
     </main>
   </div>
