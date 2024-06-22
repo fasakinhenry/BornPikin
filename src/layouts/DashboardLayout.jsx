@@ -7,6 +7,7 @@ import {
   FaUser,
   FaBaby,
   FaMoneyBill,
+  FaToolbox,
   FaSignOutAlt,
 } from 'react-icons/fa';
 
@@ -20,6 +21,7 @@ const DashboardLayout = () => {
     { icon: FaBaby, text: 'Prenatal Care', to: '/prenatal-care' },
     { icon: FaMoneyBill, text: 'Payment', to: '/payment' },
     { icon: FaUser, text: 'Profile', to: '/profile' },
+    { icon: FaToolbox, text: 'Settings', to: '/settings' },
   ];
 
   const handleLogout = () => {
