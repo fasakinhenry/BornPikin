@@ -9,8 +9,9 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Dashboard from './components/Dashboard';
 import Search from './components/Search';
-import Appointments from './components/Appointments';
 import Messages from './components/Messages';
+import Profile from './components/Profile';
+import Appointments from './components/Appointments';
 import Medication from './components/Medication';
 import Records from './components/Records';
 import Consultants from './components/Consultants';
@@ -36,8 +37,9 @@ const App = () => (
       <Route element={<DashboardLayout />}>
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/search' element={<Search />} />
-        <Route path='/appointments' element={<Appointments />} />
         <Route path='/messages' element={<Messages />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/appointments' element={<Appointments />} />
         <Route path='/medication' element={<Medication />} />
         <Route path='/records' element={<Records />} />
         <Route path='/consultants' element={<Consultants />} />
