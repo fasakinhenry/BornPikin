@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaHome, FaSearch, FaEnvelope, FaUser, FaBaby, FaMoneyBill ,FaSignOutAlt } from 'react-icons/fa';
+import {
+  FaHome,
+  FaSearch,
+  FaEnvelope,
+  FaUser,
+  FaBaby,
+  FaMoneyBill,
+  FaSignOutAlt,
+} from 'react-icons/fa';
 
 const DashboardLayout = () => {
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
@@ -19,13 +27,13 @@ const DashboardLayout = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className='flex h-screen bg-gray-100'>
       {/* Sidebar for desktop */}
-      <aside className="hidden md:flex flex-col w-64 bg-white shadow-md">
-        <div className="p-4">
-          <h1 className="text-xl font-bold">MediSync</h1>
+      <aside className='hidden md:flex flex-col w-64 bg-white shadow-md'>
+        <div className='p-4'>
+          <h1 className='text-xl font-bold'>BornPikin</h1>
         </div>
-        <nav className="flex-1">
+        <nav className='flex-1'>
           {navItems.map((item, index) => (
             <NavLink
               key={index}
@@ -36,28 +44,28 @@ const DashboardLayout = () => {
                 }`
               }
             >
-              <item.icon className="mr-3" />
+              <item.icon className='mr-3' />
               {item.text}
             </NavLink>
           ))}
         </nav>
         <button
           onClick={handleLogout}
-          className="flex items-center py-2 px-4 hover:bg-gray-200"
+          className='flex items-center py-2 px-4 hover:bg-gray-200'
         >
-          <FaSignOutAlt className="mr-3" />
+          <FaSignOutAlt className='mr-3' />
           Logout
         </button>
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 p-4 md:p-8 overflow-y-auto">
+      <main className='flex-1 p-4 md:p-8 overflow-y-auto'>
         <Outlet />
       </main>
 
       {/* Bottom navigation for mobile */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-md">
-        <ul className="flex justify-around">
+      <nav className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-md'>
+        <ul className='flex justify-around'>
           {navItems.map((item, index) => (
             <li key={index}>
               <NavLink
@@ -68,8 +76,8 @@ const DashboardLayout = () => {
                   }`
                 }
               >
-                <item.icon className="text-xl mb-1" />
-                <span className="text-xs">{item.text}</span>
+                <item.icon className='text-xl mb-1' />
+                <span className='text-xs'>{item.text}</span>
               </NavLink>
             </li>
           ))}
@@ -78,13 +86,13 @@ const DashboardLayout = () => {
 
       {/* Logout confirmation dialog */}
       {showLogoutDialog && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="bg-white p-4 rounded-lg">
-            <p className="mb-4">Are you sure you want to logout?</p>
-            <div className="flex justify-end">
+        <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center'>
+          <div className='bg-white p-4 rounded-lg'>
+            <p className='mb-4'>Are you sure you want to logout?</p>
+            <div className='flex justify-end'>
               <button
                 onClick={() => setShowLogoutDialog(false)}
-                className="mr-2 px-4 py-2 bg-gray-200 rounded"
+                className='mr-2 px-4 py-2 bg-gray-200 rounded'
               >
                 Cancel
               </button>
@@ -93,7 +101,7 @@ const DashboardLayout = () => {
                   // Perform logout action here
                   setShowLogoutDialog(false);
                 }}
-                className="px-4 py-2 bg-color-primary text-white rounded"
+                className='px-4 py-2 bg-color-primary text-white rounded'
               >
                 Logout
               </button>
