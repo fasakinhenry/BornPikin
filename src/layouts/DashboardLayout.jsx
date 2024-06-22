@@ -17,9 +17,9 @@ const DashboardLayout = () => {
     { icon: FaHome, text: 'Dashboard', to: '/dashboard' },
     { icon: FaSearch, text: 'Search', to: '/search' },
     { icon: FaEnvelope, text: 'Messages', to: '/messages' },
-    { icon: FaUser, text: 'Profile', to: '/profile' },
     { icon: FaBaby, text: 'Prenatal Care', to: '/prenatal-care' },
     { icon: FaMoneyBill, text: 'Payment', to: '/payment' },
+    { icon: FaUser, text: 'Profile', to: '/profile' },
   ];
 
   const handleLogout = () => {
