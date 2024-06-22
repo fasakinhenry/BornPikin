@@ -34,7 +34,7 @@ const Dashboard = () => {
 
 const StatCard = ({ icon, title, value }) => (
   <div className='bg-white p-4 rounded-lg shadow-md flex items-center'>
-    <div className='text-3xl text-green-500 mr-4'>{icon}</div>
+    <div className='text-3xl text-color-primary mr-4'>{icon}</div>
     <div>
       <h2 className='text-xl font-semibold'>{value}</h2>
       <p className='text-gray-600'>{title}</p>
@@ -90,7 +90,7 @@ const AppointmentItem = () => (
       <button className='px-3 py-1 text-sm bg-gray-200 rounded'>
         Reschedule
       </button>
-      <button className='px-3 py-1 text-sm bg-green-500 text-white rounded'>
+      <button className='px-3 py-1 text-sm bg-color-primary text-white rounded'>
         Details
       </button>
       <button className='px-3 py-1 text-sm bg-gray-200 rounded'>Pending</button>

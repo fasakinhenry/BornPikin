@@ -21,13 +21,13 @@ const DashboardLayout = () => {
 
   const navLinkClasses = ({ isActive }) =>
     `flex items-center py-2 px-4 ${
-      isActive ? 'bg-green-500 text-white' : 'hover:bg-gray-200'
+      isActive ? 'bg-color-primary text-white' : 'hover:bg-gray-200'
     }`;
 
   return (
     <div className='flex flex-col h-screen bg-gray-100 md:flex-row'>
       <button
-        className='md:hidden fixed top-4 left-4 z-20 bg-green-500 text-white p-2 rounded-md'
+        className='md:hidden fixed top-4 left-4 z-20 bg-color-primary text-white p-2 rounded-md'
         onClick={() => setSidebarOpen(!sidebarOpen)}
       >
         <FaBars />

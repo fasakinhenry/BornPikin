@@ -1,6 +1,7 @@
 import React from 'react';
 import gridLines from '../assets/grid_lines.png';
 import heroImage from '../assets/hero_image.png';
+import { Link } from 'react-router-dom';
 import '../index.css';
 
 const LandingPage = () => (
@@ -30,9 +31,9 @@ const LandingPage = () => (
           support mama with everything wey dem need to build better families and
           brighter futures.
         </p>
-        <button className='bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition duration-300'>
+        <Link to='/login' className='bg-purple-600 text-white px-6 py-3 rounded-full hover:bg-purple-700 transition duration-300'>
           Get Started
-        </button>
+        </Link>
       </div>
     </section>
 
