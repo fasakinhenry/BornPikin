@@ -1,134 +1,108 @@
-// src/layouts/DashboardLayout.jsx
 import React, { useState } from 'react';
-import { Outlet, NavLink } from 'react-router-dom';
-import {
-  FaThLarge,
-  FaHospital,
-  FaCalendar,
-  FaInbox,
-  FaPills,
-  FaFileAlt,
-  FaUserMd,
-  FaBlog,
-  FaCog,
-  FaSignOutAlt,
-  FaBars,
-} from 'react-icons/fa';
-import profilePic from '../assets/profile.jpg';
+import { NavLink, Outlet } from 'react-router-dom';
+import { FaHome, FaSearch, FaEnvelope, FaUser, FaBaby, FaMoneyBill ,FaSignOutAlt } from 'react-icons/fa';
 
 const DashboardLayout = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showLogoutDialog, setShowLogoutDialog] = useState(false);
 
-  const navLinkClasses = ({ isActive }) =>
-    `flex items-center py-2 px-4 ${
-      isActive ? 'bg-color-primary text-white' : 'hover:bg-gray-200'
-    }`;
+  const navItems = [
+    { icon: FaHome, text: 'Dashboard', to: '/dashboard' },
+    { icon: FaSearch, text: 'Search', to: '/search' },
+    { icon: FaEnvelope, text: 'Message', to: '/message' },
+    { icon: FaUser, text: 'Profile', to: '/profile' },
+    { icon: FaBaby, text: 'Prenatal Care', to: '/prenatal-care' },
+    { icon: FaMoneyBill, text: 'Payment', to: '/payment' },
+  ];
+
+  const handleLogout = () => {
+    setShowLogoutDialog(true);
+  };
 
   return (
-    <div className='flex flex-col h-screen bg-gray-100 md:flex-row'>
-      <button
-        className='md:hidden fixed top-4 left-4 z-20 bg-color-primary text-white p-2 rounded-md'
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-      >
-        <FaBars />
-      </button>
-
-      <aside
-        className={`w-64 bg-white shadow-md flex flex-col fixed inset-y-0 left-0 z-10 transform ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } transition-transform duration-300 ease-in-out md:relative md:translate-x-0`}
-      >
-        <div className='p-4'>
-          <h1 className='text-xl font-bold'>BornPikin</h1>
+    <div className="flex h-screen bg-gray-100">
+      {/* Sidebar for desktop */}
+      <aside className="hidden md:flex flex-col w-64 bg-white shadow-md">
+        <div className="p-4">
+          <h1 className="text-xl font-bold">MediSync</h1>
         </div>
-        <nav className='flex-1'>
-          <NavLink
-            to='/dashboard'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaThLarge className='mr-3' /> Dashboard
-          </NavLink>
-          <NavLink
-            to='/hospitals'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaHospital className='mr-3' /> Hospitals
-          </NavLink>
-          <NavLink
-            to='/appointments'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaCalendar className='mr-3' /> Appointments
-          </NavLink>
-          <NavLink
-            to='/messages'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaInbox className='mr-3' /> Messages
-          </NavLink>
-          <NavLink
-            to='/medication'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaPills className='mr-3' /> Medication
-          </NavLink>
-          <NavLink
-            to='/records'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaFileAlt className='mr-3' /> Records
-          </NavLink>
-          <NavLink
-            to='/consultants'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaUserMd className='mr-3' /> Consultants
-          </NavLink>
-          <NavLink
-            to='/blog'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaBlog className='mr-3' /> Blog
-          </NavLink>
-          <NavLink
-            to='/settings'
-            className={navLinkClasses}
-            onClick={() => setSidebarOpen(false)}
-          >
-            <FaCog className='mr-3' /> Settings
-          </NavLink>
+        <nav className="flex-1">
+          {navItems.map((item, index) => (
+            <NavLink
+              key={index}
+              to={item.to}
+              className={({ isActive }) =>
+                `flex items-center py-2 px-4 ${
+                  isActive ? 'bg-color-primary text-white' : 'hover:bg-gray-200'
+                }`
+              }
+            >
+              <item.icon className="mr-3" />
+              {item.text}
+            </NavLink>
+          ))}
         </nav>
-        <div className='p-4 border-t'>
-          <ProfileComponent />
-        </div>
+        <button
+          onClick={handleLogout}
+          className="flex items-center py-2 px-4 hover:bg-gray-200"
+        >
+          <FaSignOutAlt className="mr-3" />
+          Logout
+        </button>
       </aside>
-      <main className='flex-1 p-4 md:p-8 overflow-y-auto mt-16 md:mt-0'>
+
+      {/* Main content */}
+      <main className="flex-1 p-4 md:p-8 overflow-y-auto">
         <Outlet />
       </main>
+
+      {/* Bottom navigation for mobile */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-md">
+        <ul className="flex justify-around">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  `flex flex-col items-center py-2 ${
+                    isActive ? 'text-color-primary' : 'text-gray-600'
+                  }`
+                }
+              >
+                <item.icon className="text-xl mb-1" />
+                <span className="text-xs">{item.text}</span>
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Logout confirmation dialog */}
+      {showLogoutDialog && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-white p-4 rounded-lg">
+            <p className="mb-4">Are you sure you want to logout?</p>
+            <div className="flex justify-end">
+              <button
+                onClick={() => setShowLogoutDialog(false)}
+                className="mr-2 px-4 py-2 bg-gray-200 rounded"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => {
+                  // Perform logout action here
+                  setShowLogoutDialog(false);
+                }}
+                className="px-4 py-2 bg-color-primary text-white rounded"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
-
-const ProfileComponent = () => (
-  <div className='flex items-center'>
-    <img
-      src={profilePic}
-      alt='Profile'
-      className='w-10 h-10 rounded-full mr-3'
-    />
-    <div>
-      <p className='font-semibold'>Henry</p>
-      <p className='text-sm text-gray-600'>henry@example.com</p>
-    </div>
-  </div>
-);
 
 export default DashboardLayout;
