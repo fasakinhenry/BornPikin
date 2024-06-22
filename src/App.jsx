@@ -11,8 +11,8 @@ import Dashboard from './components/Dashboard';
 import Search from './components/Search';
 import Messages from './components/Messages';
 import PrenatalCare from './components/PrenatalCare';
+import Payment from './components/Payment';
 import Profile from './components/Profile';
-import Appointments from './components/Appointments';
 import Medication from './components/Medication';
 import Records from './components/Records';
 import Consultants from './components/Consultants';
@@ -40,8 +40,8 @@ const App = () => (
         <Route path='/search' element={<Search />} />
         <Route path='/messages' element={<Messages />} />
         <Route path='/prenatal-care' element={<PrenatalCare />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/appointments' element={<Appointments />} />
+        <Route path='/prenatal-care' element={<PrenatalCare />} />
+        <Route path='/payment' element={<Payment />} />
         <Route path='/medication' element={<Medication />} />
         <Route path='/records' element={<Records />} />
         <Route path='/consultants' element={<Consultants />} />
