@@ -10,6 +10,7 @@ import SignupPage from './pages/SignupPage';
 import Dashboard from './components/Dashboard';
 import Search from './components/Search';
 import Messages from './components/Messages';
+import PrenatalCare from './components/PrenatalCare';
 import Profile from './components/Profile';
 import Appointments from './components/Appointments';
 import Medication from './components/Medication';
@@ -38,6 +39,7 @@ const App = () => (
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/search' element={<Search />} />
         <Route path='/messages' element={<Messages />} />
+        <Route path='/prenatal-care' element={<PrenatalCare />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/appointments' element={<Appointments />} />
         <Route path='/medication' element={<Medication />} />
