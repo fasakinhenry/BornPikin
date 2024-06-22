@@ -13,8 +13,6 @@ import Messages from './components/Messages';
 import PrenatalCare from './components/PrenatalCare';
 import Payment from './components/Payment';
 import Profile from './components/Profile';
-import Consultants from './components/Consultants';
-import Blog from './components/Blog';
 import Settings from './components/Settings';
 
 const App = () => (
@@ -40,8 +38,6 @@ const App = () => (
         <Route path='/prenatal-care' element={<PrenatalCare />} />
         <Route path='/prenatal-care' element={<PrenatalCare />} />
         <Route path='/payment' element={<Payment />} />
-        <Route path='/consultants' element={<Consultants />} />
-        <Route path='/blog' element={<Blog />} />
         <Route path='/settings' element={<Settings />} />
       </Route>
     </Routes>
