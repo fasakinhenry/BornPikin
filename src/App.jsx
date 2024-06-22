@@ -8,7 +8,7 @@ import Features from './pages/Functions';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import Dashboard from './components/Dashboard';
-import Hospitals from './components/Hospitals';
+import Search from './components/Search';
 import Appointments from './components/Appointments';
 import Messages from './components/Messages';
 import Medication from './components/Medication';
@@ -35,7 +35,7 @@ const App = () => (
       {/* Main application or dashboard layout */}
       <Route element={<DashboardLayout />}>
         <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/hospitals' element={<Hospitals />} />
+        <Route path='/search' element={<Search />} />
         <Route path='/appointments' element={<Appointments />} />
         <Route path='/messages' element={<Messages />} />
         <Route path='/medication' element={<Medication />} />

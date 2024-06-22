@@ -16,7 +16,7 @@ const DashboardLayout = () => {
   const navItems = [
     { icon: FaHome, text: 'Dashboard', to: '/dashboard' },
     { icon: FaSearch, text: 'Search', to: '/search' },
-    { icon: FaEnvelope, text: 'Message', to: '/message' },
+    { icon: FaEnvelope, text: 'Messages', to: '/messages' },
     { icon: FaUser, text: 'Profile', to: '/profile' },
     { icon: FaBaby, text: 'Prenatal Care', to: '/prenatal-care' },
     { icon: FaMoneyBill, text: 'Payment', to: '/payment' },
