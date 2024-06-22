@@ -13,7 +13,6 @@ import Messages from './components/Messages';
 import PrenatalCare from './components/PrenatalCare';
 import Payment from './components/Payment';
 import Profile from './components/Profile';
-import Medication from './components/Medication';
 import Records from './components/Records';
 import Consultants from './components/Consultants';
 import Blog from './components/Blog';
@@ -42,7 +41,6 @@ const App = () => (
         <Route path='/prenatal-care' element={<PrenatalCare />} />
         <Route path='/prenatal-care' element={<PrenatalCare />} />
         <Route path='/payment' element={<Payment />} />
-        <Route path='/medication' element={<Medication />} />
         <Route path='/records' element={<Records />} />
         <Route path='/consultants' element={<Consultants />} />
         <Route path='/blog' element={<Blog />} />
