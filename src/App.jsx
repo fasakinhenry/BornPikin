@@ -14,6 +14,7 @@ import PrenatalCare from './components/PrenatalCare';
 import Payment from './components/Payment';
 import Profile from './components/Profile';
 import Settings from './components/Settings';
+import NotFound from "./pages/NotFound";
 
 const App = () => (
   <Router>
@@ -38,8 +39,8 @@ const App = () => (
         <Route path='/prenatal-care' element={<PrenatalCare />} />
         <Route path='/payment' element={<Payment />} />
         <Route path='/profile' element={<Profile />} />
-        <Route path='/settings' element={<Settings />} />
       </Route>
+      <Route path="*" element={<NotFound />}/>
     </Routes>
   </Router>
 );
