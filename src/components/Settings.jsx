@@ -89,7 +89,9 @@ const Settings = () => {
         <h2 className='font-semibold mb-4'>Change Password</h2>
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <div>
-            <label className='block font-medium text-gray-700'>Current Password</label>
+            <label className='block font-medium text-gray-700'>
+              Current Password
+            </label>
             <input
               type='password'
               value={currentPassword}
@@ -98,7 +100,9 @@ const Settings = () => {
             />
           </div>
           <div>
-            <label className='block font-medium text-gray-700'>New Password</label>
+            <label className='block font-medium text-gray-700'>
+              New Password
+            </label>
             <input
               type='password'
               value={newPassword}
@@ -107,7 +111,9 @@ const Settings = () => {
             />
           </div>
           <div>
-            <label className='block font-medium text-gray-700'>Confirm Password</label>
+            <label className='block font-medium text-gray-700'>
+              Confirm Password
+            </label>
             <input
               type='password'
               value={confirmPassword}
