@@ -1,13 +1,71 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const SignupPage = () => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform signup logic here
-    navigate('/dashboard');
+    const formData = new FormData(e.target);
+    const fullname = formData.get('fullname');
+    const email = formData.get('email');
+    const username = formData.get('username');
+    const password = formData.get('password');
+    const accountType = formData.get('accountType');
+    const country = formData.get('country');
+    const state = formData.get('state');
+
+    // Validate input data
+    const errors = {};
+    if (!fullname) {
+      errors.fullname = 'Required';
+    }
+    if (!email) {
+      errors.email = 'Required';
+    }
+    if (!username) {
+      errors.username = 'Required';
+    }
+    if (!password) {
+      errors.password = 'Required';
+    }
+    if (!accountType) {
+      errors.accountType = 'Required';
+    }
+    if (!country) {
+      errors.country = 'Required';
+    }
+    if (!state) {
+      errors.state = 'Required';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      // Display error messages to the user
+      console.error(errors);
+      return;
+    }
+
+    // Make HTTP request to signup endpoint
+    try {
+      const response = await axios.post('/register/', {
+        fullname,
+        email,
+        username,
+        password,
+        accountType,
+        country,
+        state,
+      });
+      const data = response.data;
+      if (data.success) {
+        navigate('/dashboard');
+      } else {
+        console.error(data.error);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (

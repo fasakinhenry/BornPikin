@@ -1,13 +1,29 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [accountType, setAccountType] = useState("");
+  const [error, setError] = useState(null);
+  const [token, setToken] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform login logic here
-    navigate("/dashboard");
+        axios.post("/login/", { email, password, accountType })
+      .then((response) => {
+        const { data } = response;
+        setToken(data.token);
+        // Store the token in local storage or cookies
+        localStorage.setItem("token", data.token);
+        navigate("/dashboard");
+      })
+      .catch((error) => {
+        setError(error.response.data.error);
+      });
   };
 
   return (
