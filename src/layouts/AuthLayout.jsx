@@ -4,7 +4,7 @@ import gridLines from '../assets/grid_lines.png';
 
 const AuthLayout = () => (
   <div className="flex h-screen">
-    <aside className="w-1/2 bg-blue-600 flex flex-col items-center justify-center text-white">
+    <aside className="w-1/2 bg-purple-500 flex flex-col items-center justify-center text-white">
       <div className="flex flex-col items-center">
         {/* <img src="logo.png" alt="Pipance Logo" className="w-20 h-20 mb-4" /> */}
         <h1 className="text-4xl font-bold">BornPikin</h1>

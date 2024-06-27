@@ -89,7 +89,7 @@
 
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
 const LoginPage = () => {
@@ -116,11 +116,16 @@ const LoginPage = () => {
 
   return (
     <div className="w-full max-w-sm">
+      <img src="path/to/logo.png" alt="BornPikin Logo" className="w-10 h-10 mr-2" />
+        <h6 className='text-purple-800 text-center'>
+          <span className="text-purple-700">Born</span>
+          <span className="text-black">Pikin</span>
+        </h6>
       <h1 className="text-3xl font-bold mb-6">Welcome back!</h1>
       <p className="text-gray-600 mb-4">Please enter your details!</p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block mb-2 text-sm font-medium text-gray-700">
+          <label className="block mb-2 text-sm font-medium text-purple-800">
             Email
           </label>
           <input
@@ -132,7 +137,7 @@ const LoginPage = () => {
           />
         </div>
         <div>
-          <label className="block mb-2 text-sm font-medium text-gray-700">
+          <label className="block mb-2 text-sm font-medium text-purple-800">
             Password
           </label>
           <input
@@ -144,7 +149,7 @@ const LoginPage = () => {
           />
         </div>
         <div>
-          <label className="block mb-2 text-sm font-medium text-gray-700">
+          <label className="block mb-2 text-sm font-medium text-purple-800">
             Account Type
           </label>
           <select
@@ -159,21 +164,21 @@ const LoginPage = () => {
           </select>
         </div>
         <div className="flex items-center justify-between">
-          <a href="#" className="text-sm text-blue-500 hover:underline">
+          <a href="#" className="text-sm text-purple-600 hover:underline">
             Forgot Password?
           </a>
         </div>
         <button
           type="submit"
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:bg-blue-700"
+          className="w-full px-4 py-2 bg-purple-600  text-white rounded-md hover:bg-purple-600  focus:outline-none focus:bg-purple-700"
         >
           Sign in
         </button>
         <p className="mt-4 text-sm text-gray-600 text-center">
           Don’t have an account?{" "}
-          <a href="#" className="text-blue-500 hover:underline">
+          <Link to='/signup' className="text-purple-600 hover:underline">
             Sign Up
-            </a>
+          </Link>
         </p>
       </form>
     </div>
