@@ -229,7 +229,7 @@ const SignupPage = () => {
     }
 
     try {
-      const response = await axios.post('/register/', {
+      const response = await axios.post('https://bornpikin-backend-3.onrender.com/register/', {
         fullname,
         email,
         username,
