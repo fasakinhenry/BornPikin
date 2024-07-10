@@ -1,4 +1,5 @@
-// import React from 'react';
+/
+ import React from 'react';
 // import { useNavigate } from 'react-router-dom';
 // import axios from 'axios';
 
@@ -184,6 +185,9 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
 
+
+const API_URL = 'https://bornpikin-backend-3.onrender.com';
+
 const SignupPage = () => {
   const navigate = useNavigate();
   const [fullname, setFullname] = useState("");
@@ -228,7 +232,7 @@ const SignupPage = () => {
     }
 
     try {
-      const response = await axios.post('/register/', {
+      const response = await axios.post('${API_URL}/register/', {
         fullname,
         email,
         username,
