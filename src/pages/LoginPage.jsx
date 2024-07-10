@@ -93,8 +93,6 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = https://bornpikin-backend-3.onrender.com;
-
 const LoginPage = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -105,7 +103,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("${API_URL}/login/", { email, password, accountType })
+    axios.post("/login/", { email, password, accountType })
       .then((response) => {
         const { data } = response;
         setToken(data.token);
