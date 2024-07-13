@@ -102,7 +102,7 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("https://bornpikin-backend-3.onrender.com/userAuth/login/", { email, password, accountType })
+    axios.post("https://bornpikin-backend-3.onrender.com/user-auth/login/", { email, password, accountType })
       .then((response) => {
         const { data } = response;
         setToken(data.token);
