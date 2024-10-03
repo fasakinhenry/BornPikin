@@ -16,3 +16,4 @@ A scalable, cost-effective digital health solutions that significantly improve a
 - **Navigation**: Easy navigation to different sections of the app.
 
 > This project was created during the period of the ATTF Hackathon
+> copyright 2024
